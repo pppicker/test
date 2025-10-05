@@ -254,13 +254,21 @@ class BSEScraper:
 
 
 def main():
-    """Example usage of the BSE scraper"""
+    """Example usage of the BSE scraper with CLI support"""
+    import sys
+    
     # Initialize scraper
     scraper = BSEScraper()
     
-    # Example Beijing Stock Exchange ticker
-    # Note: Replace with actual BSE ticker code
-    ticker = "430047"  # Will be converted to bj430047
+    # Support command-line arguments
+    if len(sys.argv) > 1:
+        ticker = sys.argv[1]
+        print(f"Using ticker from command line: {ticker}")
+    else:
+        # Example Beijing Stock Exchange ticker
+        # Note: Replace with actual BSE ticker code
+        ticker = "430047"  # Will be converted to bj430047
+        print(f"Using default ticker: {ticker}")
     
     print("=" * 60)
     print("Beijing Stock Exchange Data Scraper - Sina Finance")

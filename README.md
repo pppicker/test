@@ -33,6 +33,12 @@ Run the script with default example ticker:
 python bse_scraper.py
 ```
 
+Or specify a custom ticker:
+
+```bash
+python bse_scraper.py 430139
+```
+
 ### Programmatic Usage
 
 ```python
